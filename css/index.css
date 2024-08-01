@@ -1,0 +1,819 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+* {
+    box-sizing: border-box
+}
+
+a {
+    color: #1f1f1f;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
+.tab_css {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.tab_css .tabinput {
+    display: none
+}
+
+.tab_css .tablabel {
+    margin: 10px 0px 10px 15px;
+    width: 30%;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    opacity: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tab_content {
+    position:relative;
+    order: 1;
+    display: none;
+    width: 99%;
+    border-bottom: 3px solid #ddd;
+    line-height: 1.6;
+    font-size: .9em;
+    padding: 15px;
+    border: 1px solid #abafa8;
+    /* border-radius: 5px; */
+    margin: auto;
+    background-color: #ece8e1;
+}
+
+.tab_css .tabinput:checked+.tablabel,
+.tab_css .tablabel:hover {
+    opacity: 1;
+    font-weight: bold;
+    background-color: #ff4655;
+    color: #f9f9f9;
+    transition: all 0.3s linear;
+}
+
+.tab_css .tabinput:checked+.tablabel+.tab_content {
+    display: initial;
+}
+
+.contentBtn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 14px;
+    /* border-radius: 10px; */
+    background-color: #f9f9f9;
+    border: solid 1px #1f1f1f;
+    color: black;
+    text-align: center;
+    transition-duration: 0.05s;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 35px 8px 10px;
+    cursor: pointer;
+}
+
+.contentBtn:hover {
+    background-color: #00b9aa;
+    color: white;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    transition: all 0.1s linear;
+    border: solid 1px #00b9aa;
+}
+
+.contentBtn.selected {
+    background-color: #00b9aa;
+    color: white;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    transition: all 0.1s linear;
+    border: solid 1px #00b9aa;
+}
+
+select {
+    width: auto;
+    background-color: #ff4655;
+    color: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 8px;
+    font-weight: bold;
+    margin: 10px 4px 15px 6px;
+    line-height: 1.0;
+    display: inline;
+    font-size: 16px;
+}
+
+option {
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.agentcontent {
+    width: 100%;
+    height: auto;
+}
+
+.agentsjpg {
+    width: 50%;
+    float: left;
+    padding: 0px 20px 0px 20px;
+}
+
+.agentsjpg img {
+    width: 700px;
+    height: 700px;
+    animation: fadein 1s linear;
+    display: block;
+    /* margin-left: 10%; */
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.agentstext {
+    float: right;
+    margin-right: 18%;
+    width: 30%;
+    padding: 20px;
+}
+
+.agentstext p {
+    margin-left: 3%;
+    font-size: 18px;
+    color: #666;
+    display: inline;
+    top: 15%;
+
+}
+
+.agentstext_a {
+    font-size: 50px;
+    color: #1f1f1f;
+    font-weight: 1500;
+    text-align: justify;
+    /* right: 100px;
+    top: 20px;
+    float: right; */
+}
+
+.role {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 15px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.agentcontent_a {
+    font-size: 20px;
+    color: #777;
+}
+
+.btnimg {
+    width: 70px;
+    height: 70px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.skilltext {
+    font-weight: 800;
+    right: 15%;
+    font-size: 40px;
+}
+
+#classic img {
+    background: url("../valorant/weapons/classic.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+
+}
+
+#classic img:hover {
+    background: url("../valorant/weapons/classic_text.png");
+    width: 100%;
+    height: 431.85px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid black;
+    transition: transform 0.5s ease-in-out;
+    background-color: #ff4655;
+}
+
+#shorty img {
+    background: url("../valorant/weapons/short.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#shorty img:hover {
+    background: url("../valorant/weapons/shorty_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 1px solid black;
+    background-color: #ff4655;
+}
+
+#frenzy img {
+    background: url("../valorant/weapons/frenzy.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#frenzy img:hover {
+    background: url("../valorant/weapons/frenzy_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#ghost img {
+    background: url("../valorant/weapons/ghost.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#ghost img:hover {
+    background: url("../valorant/weapons/ghost_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#stinger img {
+    background: url("../valorant/weapons/stinger.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#stinger img:hover {
+    background: url("../valorant/weapons/stinger_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#sheriff img {
+    background: url("../valorant/weapons/sheriff.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#sheriff img:hover {
+    background: url("../valorant/weapons/sheriff_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#spectre img {
+    background: url("../valorant/weapons/spectre.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#spectre img:hover {
+    background: url("../valorant/weapons/spectre_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#bucky img {
+    background: url("../valorant/weapons/bucky.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#bucky img:hover {
+    background: url("../valorant/weapons/bucky_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#judge img {
+    background: url("../valorant/weapons/judge.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#judge img:hover {
+    background: url("../valorant/weapons/judge_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#bulldog img {
+    background: url("../valorant/weapons/bulldog.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#bulldog img:hover {
+    background: url("../valorant/weapons/bulldog_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#guardian img {
+    background: url("../valorant/weapons/guardian.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#guardian img:hover {
+    background: url("../valorant/weapons/guardian_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#phantom img {
+    background: url("../valorant/weapons/phantom.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#phantom img:hover {
+    background: url("../valorant/weapons/phantom_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#vandal img {
+    background: url("../valorant/weapons/vandal.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#vandal img:hover {
+    background: url("../valorant/weapons/vandal_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#marshal img {
+    background: url("../valorant/weapons/marshal.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#marshal img:hover {
+    background: url("../valorant/weapons/marshal_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#operator img {
+    background: url("../valorant/weapons/operator.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#operator img:hover {
+    background: url("../valorant/weapons/operator_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#outlaw img {
+    background: url("../valorant/weapons/outlaw.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#outlaw img:hover {
+    background: url("../valorant/weapons/outlaw_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#ares img {
+    background: url("../valorant/weapons/ares.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#ares img:hover {
+    background: url("../valorant/weapons/ares_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#odin img {
+    background: url("../valorant/weapons/odin.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#odin img:hover {
+    background: url("../valorant/weapons/odin_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+#melee img {
+    background: url("../valorant/weapons/melee.png");
+    width: 700px;
+    height: 431.85px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+
+#melee img:hover {
+    background: url("../valorant/weapons/melee_text.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ff4655;
+    border: 1px solid black;
+}
+
+.weapon {
+    border: 1px solid black;
+    display: inline-block;
+    width: 700px;
+    height: 431.85px;
+}
+
+.skill_descript {
+    position: relative;
+    display: inline-block;
+    width: 520px;
+    height: 150px;
+    /* border: 1px solid black; */
+    margin: 20px 10px 0px 23px;
+}
+
+.skillTitle {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 16px;
+    animation: fadein .5s linear;
+}
+
+.skillContent {
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    padding: 5px;
+    animation: fadein .5s linear;
+    text-align: justify;
+}
+
+.carousel_parent {
+    position:relative;
+    margin:auto;
+    display:flex;
+    align-items: center;
+    height:700px;
+    width:1400px;
+}
+
+.carousel {
+    height: 675px;
+    width: 1200px;
+    overflow: hidden;
+    margin:0px auto;
+    z-index: 0;
+    /* position: relative; */
+}
+
+.mapimg_container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* .mapbtn_container {
+    display: flex;
+    justify-content: space-between;
+  } */
+
+.mapbtn {
+    display: flex;
+    position:absolute;
+    z-index: 1;
+    background-color: #ece8e1;
+    color: #666;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 50px;
+    opacity: 0.3;
+    padding-bottom: 7px;
+}
+
+#left {
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-right: 10px;
+}
+
+#right {
+    margin: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-left: 10px;
+}
+
+.mapbtn:hover {
+    background-color: #ff4655;
+    color: #ece8e1;
+    opacity: 0.9;
+}
+
+/* .mapbtn:focus {
+    outline: none;
+} */
+
+.mapimg {
+    width: 1200px;
+    height: 675px;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+/* #mapnames {
+    position: absolute;
+    right:30px;
+    bottom:0px;
+    background-color: #8b978f;
+    width:350px;
+    height:200px;
+    z-index: 1; 
+    border-radius: 10px;
+} */
+
+.map_name {
+    width: 330px;
+    height:220px;
+    object-fit: cover;
+}
+
+.map_title {
+    font-size: 26px; 
+    font-weight: bold; 
+    color: white; 
+    margin: 3px;
+    width: 330px;
+    padding: 0px 10px 10px 30px;
+}
+
+.map_text {
+    font-size: 14px; 
+    /* font-weight: bold;  */
+    color: white; 
+    margin: 5px;
+    width: 330px;
+    padding: 5px 40px 25px 30px;
+    text-align: justify;
+}
+
+.maptext_container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.map_carousel {
+    right:30px;
+    bottom:-10px;
+    height: 220px;
+    width: 330px;
+    overflow: hidden;
+    /* margin:0px auto; */
+    z-index: 5;
+    background-color: #8b978f;
+    position: absolute;
+}

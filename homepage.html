@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《VALORANT》</title>
+    <link rel="icon" href="valorant/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        body {
+            overflow:hidden; 
+            background-color: #191e29;
+        }
+
+        div{
+            z-index:1;
+        }
+
+        img {
+            position: absolute; 
+            height:100%; opacity: 0.7;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            -webkit-filter: brightness(1.2);
+            filter: brightness(1.2);
+        }
+
+        a {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 15px;
+            position:absolute; 
+            color: white; 
+            font-size: 200px; 
+            z-index: 2; 
+            opacity: 1.5;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+        }
+
+        p {
+            top: 30%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            position:absolute; 
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            width: 20%;
+            height: 10%;
+            top: 80%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            position:absolute; 
+            color: #888;
+            background-color: #ece8e1;
+            font-size: 25px;
+            font-weight: bold;
+            border: 5px double #191e29;
+            box-shadow: 5px 5px 5px #191e29;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff4655;
+            color: #ece8e1;
+        }
+
+        button:active {
+            transform:translate(-50%,-50%) scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="valorant/wallpaper3.jpg">       
+    </div>
+    <p>以角色為核心的5對5戰略射擊遊戲</p>
+    <a>VALORANT</a>
+    <button onclick="buttonOnClick();">開始介紹</button>
+
+    <script>
+        function buttonOnClick(){
+            window.location.href = "./index.html";
+        }
+    </script>
+</body>
+</html>
